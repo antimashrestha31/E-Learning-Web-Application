@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pages {
+  margin-top: 108px;
+  
+}
+
+header {
+    position: fixed;
+    padding: 30px 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition:  0.6s;
+    z-index: 1000;
+    /* background: #e3f0f2; */    
+}
+
+header.sticky-header {
+    transition:  0.6s;
+    padding: 5px 100px;
+    background: #e3f0f2;
+}
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #0f3845;
+    text-decoration: none;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0f3845;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition:  0.3s;
+}
+
+header ul li a:hover {
+    color: #b92323; 
+    transform: scale(1.1); 
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../image/loveit.jpeg)  no-repeat center center/cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.slogan {
+    /* margin-bottom: 20px; */
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #0f3845;
+    text-align: center;
+    /* background-color: rgba(255, 193, 203, 0.5); */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+    color: #b92323;
+}
+
+/* second section for Featured course */
+.featured{
+    /* background-color: aquamarine; */
+    padding-bottom: 50px;
+}
+.featured h1{
+    color: #b92323;
+}
+
+/* for cards in our features */
+
+.container {
+    width: 100%;
+    display: flex;
+    gap: 150px;
+    margin-left: 65px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 500px;
+    /* height: 400px; */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color:#10333e;
+}
+
+.card-content p {
+    margin: 0;
+    color: #666;
+    text-align: justify;
+    font-weight: 600;
+/* text-justify: inter-word; */
+}
+
+
+
+.about-section{
+    padding: 20px;
+    /* margin-left: 80px;
+    margin-right: 80px; */
+    /* background-color:#d1f3ed; */
+}
+.contribute-indexdiv{
+    margin-right: 80px;
+}
+
+
+.Copyright-div{
+    font-weight:bold;
+    color: #0f3845;
+}
+
+
+
+
+
+/* css for contribution page */
+/* image with text and button overlay */
+.banner-card {
+    padding: 24px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+}
+
+.banner-card img {
+    width: 85%;
+    max-height: 530px;
+    height: auto;
+    /* opacity: 80%; */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 8%; /* Moves the text to the left side of the image */
+    transform: translateY(-50%);
+    text-align: left; /* Aligns text to the left */
+    padding: 20px;
+    max-width: 50%; /* Optional: Restrict the width of text to keep it within image boundaries */
+}
+
+.banner-text h4{
+    margin: 0 0 10px;
+    color: #b92323;
+    font-size: xx-large;
+    font-weight: bolder;
+    /* letter-spacing: 2px; */
+}
+.banner-text h3{
+    margin: 10px 0 15px;
+    font-size: larger;
+    font-weight: bold;
+    color: #2e6930;
+    
+}
+  
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .banner-card {
+      flex-direction: column;
+      padding: 16px;
+  }
+
+  .banner-card img {
+      width: 100%; /* Make the image full width */
+      max-height: 300px; /* Adjust max height for smaller screens */
+  }
+
+  .banner-text {
+      position: static; /* Removes absolute positioning */
+      transform: none; /* Resets transformation */
+      max-width: 100%; /* Allow text to take full width */
+      margin-top: 16px; /* Adds spacing between image and text */
+      text-align: center; /* Center-aligns text for better readability */
+  }
+
+  .banner-text h4 {
+      font-size: large; /* Adjust text size for smaller screens */
+  }
+
+  .banner-text h3 {
+      font-size: medium; /* Adjust text size for smaller screens */
+  }
+
+  .banner-text button {
+      margin: 10px auto; /* Center-aligns the button */
+  }
+}
+
+/* Section styling */
+.alert-section {
+    width: 87%; /* Matches user's preferred width */
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* background-image: linear-gradient(to left,#D1E9F6,#f9f6ed, #D1E9F6); */
+  }
+  
+  /* Header styling */
+  
+  .Alert-div h2 {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  
+  /* Alert box styling */
+  .alert-primary {
+    color: #084298;
+    background-color: #cfe2ff;
+    border-color: #b6d4fe;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 40px;
+  }
+  
+  .alert-primary:hover {
+    background-color: #bfdfff;
+    color: #07367d;
+  }
+  
+  .alert {
+    text-align: center;
+    font-weight: 500;
+  }
+  /* Container styling */
+.Asset-info {
+  display: flex;
+  align-items: center; /* Vertically centers items within the flex container */
+  justify-content: center; /* Horizontally centers items */
+  gap: 20px; /* Adds space between the image and text */
+  padding: 1rem; /* Adds padding around the container */
+  background-color: #f4f4f4; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  max-width: 600px; /* Adjusts width for a contained layout */
+  margin: 0 auto; /* Centers the container on the page */
+}
+
+/* feedback mechanism */
+.feedback{
+  margin-top: 10px;
+}
+.feedback h2{
+  color: #0f3845;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.8rem;
+}
+.feedback-text{
+  font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+.feedback-range{
+  margin-top:15px ;
+}
+.feedback-button{
+  margin-top: 5px;
+  justify-content: left;
+}
+/* Circular image styling */
+.circular-image {
+  display: block; /* Removes any extra inline spacing */
+  /* border-radius: 50%; */
+  width: 60px; /* Adjust width */
+  height: 55px; /* Adjust height */
+  object-fit: cover; /* Ensures the image fills the circular frame without distortion */
+  overflow: hidden; /* Ensures no overflow beyond the circular boundary */
+  /* border: 3px solid #c0acda; Border for emphasis */
+  margin-right: 15px;
+}
+
+.submission{
+  margin-bottom: 1.8rem;
+  display: flex;
+}
+
+/* Text styling */
+.Asset-info h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.Asset-info p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.5rem 0 0 0; /* Adds spacing above the paragraph */
+  line-height: 1.6;
+}
+
+.contribution-form h3 {
+  font-size: 1.8rem;
+  color: #b92323;
+  margin-bottom: 0.5rem;
+}
+
+.contribution-form {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.contribution-form .form-control {
+  width: 100%;
+}
+.copyright-section{
+  font-weight: bold;
+}
+
+
+
+
+/* course page css */
